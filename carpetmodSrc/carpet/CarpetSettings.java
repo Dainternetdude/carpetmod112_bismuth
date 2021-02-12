@@ -44,8 +44,8 @@ public class CarpetSettings
     public static boolean locked = false;
 
     // TODO: replace these constants at build time
-    public static final String carpetVersion = "v20_09_08";
-    public static final String minecraftVersion = "1.12.2";
+    public static final String carpetVersion = "v21_02_11_bismuth";
+    public static final String minecraftVersion = "1.12";
     public static final String mcpMappings = "39-1.12";
 
     public static final Logger LOG = LogManager.getLogger();
@@ -763,6 +763,11 @@ public class CarpetSettings
     public static boolean sendDuplicateEntitiesToClients = false;
 
     // ===== FEATURES ===== //
+
+    @Rule(desc = "Tweak rcon protocol to allow chat bridges using it", category = {SURVIVAL, EXPERIMENTAL})
+    @CreativeDefault
+    @SurvivalDefault
+    public static boolean rconChatBridge = false;
 
     @Rule(desc = "Enables skyblock on 1.12, all blocks but end portal frames will be removed in newly generated chunks.", category = FEATURE, extra = "WARNING! Don't turn on if not planning to play skyblock.")
     public static boolean skyblock;
